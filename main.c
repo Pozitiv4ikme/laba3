@@ -9,41 +9,41 @@ void Find_Dominator() {
     int size = 0;
     int value = 0;
     
-    for (int i = 0; i < 8; i++) {                 // проводимо сортування масиву
-        if (size == 0) {
+    for (int i = 0; i < 8; i++)                // проводимо сортування масиву
+    {
+        if (size == 0)
+        {
             size++;
             value = arrayOfNumber[i];   // перебираючи список
         }
-        else {
-            if (value != arrayOfNumber[i]) {
+        else
+        {
+            if (value != arrayOfNumber[i])
                 size--;
-            }
         }
     }
     
     dominator = -1;
     
-    if(size > 0){
+    if (size > 0)
+    {
         dominator = value;                       // визначаємо домінатор
     }
     
     int leader = -1;
     int count = 0;
     
-    for (int j = 0; j < 8; j++) {
-        if (arrayOfNumber[j] == dominator) {       // перевіряємо скільки раз зустрічається домінатор у масисі
+    for (int j = 0; j < 8; j++)
+    {
+        if (arrayOfNumber[j] == dominator)         // перевіряємо скільки раз зустрічається домінатор у масисі
             count++;
-        }
     }
-    if (count > (8 / 2)) {                           // проводимо перевірку чи складає домінатор хоч половину масиву
+    if (count > (8 / 2))                           // проводимо перевірку чи складає домінатор хоч половину масиву
         leader = dominator;
-    }
-    else{
+    else
+    {
         printf("-1");                            // якщо не складає то виводимо -1
     }
-    //printf("size=%d\n", size);
-    //printf("value=%d\n", value);
-    //printf("leader=%d\n", leader);
     printf("dominator=%d\n", dominator);
 }
 int main() {
