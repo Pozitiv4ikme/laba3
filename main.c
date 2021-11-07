@@ -5,7 +5,7 @@
 static int arrayOfNumber[] = {3,4,3,2,3,1,3,3};
 static int dominator;
 
-void Find_Dominator() {
+void find_dominator() {
     int size = 0;
     int value = 0;
     
@@ -47,7 +47,7 @@ void Find_Dominator() {
     printf("dominator=%d\n", dominator);
 }
 int main() {
-    Find_Dominator();                            // запускаємо нашу функцію
+    find_dominator();                            // запускаємо нашу функцію
     return 0;
 }
 
